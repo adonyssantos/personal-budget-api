@@ -1,0 +1,26 @@
+<!-- Extend layout -->
+{% extends 'layout.html' %}
+
+<!-- Set page title -->
+{% block title %}Home{% endblock %}
+
+<!-- Page content -->
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-4">Welcome Adonys</h1>
+  <p class="lead">Your current available balance</p>
+  <hr class="my-4" />
+  <div class="row">
+    {% for category in categories_balance %}
+    <div class="col-md-3 my-2">
+      <div class="card bg-primary">
+        <div class="card-body">
+          <h5 class="card-title">{{ category.name }}</h5>
+          <p class="card-text">${{ category.balance }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endblock %}
+</div>
