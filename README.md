@@ -17,6 +17,6 @@ source .venv/bin/activate
 **Run the API with Python:**
 
 ```sh
-python run.py
+python3.8 run.py
 
 ```
